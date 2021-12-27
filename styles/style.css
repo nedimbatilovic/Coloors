@@ -160,6 +160,7 @@ input[type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
+  border: 1px gray solid;
   margin: 1rem 0rem;
   width: 100%;
   position: relative;
@@ -169,6 +170,7 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
+  appearance: none;
   border: 1.5px gray solid;
   appearance: none;
   width: 13px;

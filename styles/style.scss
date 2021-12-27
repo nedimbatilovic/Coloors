@@ -121,6 +121,7 @@ svg {
 input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
+    border: 1px gray solid;
     margin: 1rem 0rem;
     width: 100%;
     position: relative;
@@ -128,6 +129,7 @@ input[type="range"] {
     cursor: pointer;
     &::-webkit-slider-thumb {
         -webkit-appearance: none;
+        appearance: none;
         border: 1.5px gray solid;
         appearance: none;
         width: 13px;
