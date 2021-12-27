@@ -48,11 +48,11 @@ svg {
     background: white;
     padding: 1rem;
     width: 80%;
-    opacity: 0;
-    pointer-events: none;
+    // opacity: 0;
+    // pointer-events: none;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    transform: translateY(100px);
+    // transform: translateY(100px);
     transition: all 0.5s ease-in-out;
     &.active {
         opacity: 1;
@@ -115,4 +115,24 @@ svg {
     background: none;
     cursor: pointer;
     margin: 2rem 0rem;
+}
+
+// slider stuff
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    border-radius: 1rem;
+    cursor: pointer;
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: 1.5px gray solid;
+        appearance: none;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: white;
+    }
 }

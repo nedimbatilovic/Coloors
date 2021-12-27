@@ -8,12 +8,8 @@ const currentHexes = document.querySelectorAll(".color h2");
 
 // color generator
 function generateHex() {
-    letters = "#0123456789ABCDEF";
-    let hash = "#";
-    for (i = 0; i < 6; i++) {
-        hash += letters[Math.floor(Math.random() * 16)];
-    }
-    return hash;
+    const hexColor = chroma.random();
+    return hexColor;
 }
 
 function randomColors() {
@@ -23,7 +19,37 @@ function randomColors() {
 
         div.style.backgroundColor = randomColor;
         hexText.innerText = randomColor;
+
+        checkTextContrast(randomColor, hexText);
+        const color = chroma(randomColor);
+        const sliders = div.querySelectorAll(".sliders input");
+        const hue = sliders[0];
+        const brightness = sliders[1];
+        const saturation = sliders[2];
+
+        colorizeSliders(color, hue, brightness, saturation);
     });
+}
+
+function checkTextContrast(color, text) {
+    const luminance = chroma(color).luminance();
+    if (luminance > 0.5) {
+        text.style.color = "black";
+    } else {
+        text.style.color = "white";
+    }
+}
+
+function colorizeSliders(color, hue, brightness, saturation) {
+    const noSat = color.set("hsl.s", 0);
+    const fullSat = color.set("hsl.s", 1);
+    const scaleSat = chroma.scale([noSat, color, fullSat]);
+
+    saturation.style.backgroundImage = `linear-gradient(
+        to right, 
+        ${scaleSat(0)}, 
+        ${scaleSat(1)}
+    )`;
 }
 
 randomColors();

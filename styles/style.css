@@ -68,12 +68,8 @@ svg {
   background: white;
   padding: 1rem;
   width: 80%;
-  opacity: 0;
-  pointer-events: none;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -158,5 +154,26 @@ svg {
   background: none;
   cursor: pointer;
   margin: 2rem 0rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1.5px gray solid;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: white;
 }
 /*# sourceMappingURL=style.css.map */
