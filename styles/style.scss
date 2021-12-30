@@ -139,7 +139,9 @@ input[type="range"] {
     }
 }
 
-.copy-container {
+.copy-container,
+.save-container,
+.library-container {
     position: fixed;
     top: 0%;
     left: 0%;
@@ -158,7 +160,9 @@ input[type="range"] {
     }
 }
 
-.copy-popup {
+.copy-popup,
+.save-popup,
+.library-popup {
     background: white;
     display: flex;
     flex-direction: column;

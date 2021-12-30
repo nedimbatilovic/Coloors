@@ -9,11 +9,10 @@ const lockButton = document.querySelectorAll(".lock");
 const closeAdjustments = document.querySelectorAll(".close-adjustment");
 const sliderContainers = document.querySelectorAll(".sliders");
 let initialColors;
+let savedPalettes = [];
 
 //event listeners
-generateBtn.addEventListener("click", () => {
-    randomColors();
-});
+generateBtn.addEventListener("click", randomColors);
 
 sliders.forEach((slider) => {
     slider.addEventListener("input", hslControls);
@@ -229,5 +228,28 @@ function lockLayer(e, index) {
         e.target.innerHTML = '<i class="fas fa-lock-open"></i>';
     }
 }
+
+// implement save to palette and local storage
+const saveBtn = document.querySelector(".save");
+const submitSave = document.querySelector(".submit-save");
+const closeSave = document.querySelector(".close-save");
+const saveContainer = document.querySelector(".save-container");
+const saveInput = document.querySelector(".save-container input");
+
+// event listeners
+saveBtn.addEventListener("click", openPalette);
+closeSave.addEventListener("click", closePalette);
+
+function openPalette(e) {
+    const popup = saveContainer.children[0];
+    saveContainer.classList.add("active");
+    popup.classList.add("active");
+}
+
+function closePalette() {
+    const popup = saveContainer.children[0];
+    saveContainer.classList.remove("active");
+    popup.classList.remove("active");
+} // not working
 
 randomColors();
