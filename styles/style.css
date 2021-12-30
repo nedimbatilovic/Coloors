@@ -255,4 +255,37 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 2rem;
   padding: 2rem;
 }
+
+.save-name {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 55%;
+}
+
+.close-save,
+.close-library {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  border: none;
+  background: #494949;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-top-right-radius: 1.8rem;
+  border-bottom-left-radius: 2rem;
+  padding: 1rem;
+}
+
+.submit-save {
+  font-size: 1rem;
+  margin: 2rem;
+  padding: 1rem 3rem;
+  background: #1f213f;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
