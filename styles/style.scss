@@ -254,10 +254,12 @@ input[type="range"] {
 }
 
 .pick-palette-btn {
+    margin-left: 0.5rem;
     height: 5rem;
     border: none;
     padding: 1rem;
     cursor: pointer;
     font-size: 1.2rem;
     background: rgb(51, 51, 51);
+    color: white;
 }
