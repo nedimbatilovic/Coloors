@@ -98,6 +98,10 @@ svg {
   font-weight: bold;
 }
 
+.sliders span {
+  color: gray;
+}
+
 .controls {
   display: -webkit-box;
   display: -ms-flexbox;
